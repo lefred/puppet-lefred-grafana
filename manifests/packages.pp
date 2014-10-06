@@ -1,4 +1,6 @@
-class grafana::packages ($version="1.8.1") {
+class grafana::packages {
+
+   $version = $grafana::version
  
    exec {
       'install_grafana':

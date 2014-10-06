@@ -1,4 +1,4 @@
-class grafana {
+class grafana ($version="1.8.1") {
 
    include grafana::packages	
    include grafana::config
