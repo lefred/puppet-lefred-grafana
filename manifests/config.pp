@@ -14,5 +14,6 @@ class grafana::config {
 	$fileloc:
 		ensure  => present,
 		source  => "puppet:///modules/grafana/grafana.conf", 
+		notify  => Service['httpd'],
    }
 }
