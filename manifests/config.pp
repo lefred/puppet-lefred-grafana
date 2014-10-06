@@ -13,6 +13,9 @@ class grafana::config {
    file {
 	$fileloc:
 		ensure  => present,
-		source  => "puppet:///modules/grafana/grafana.conf", 
+		source  => "puppet:///modules/grafana/grafana.conf";
+	"/usr/share/grafana/config.js":
+		ensure => present,
+		content => template("grafana/config.js.erb");
    }
 }
