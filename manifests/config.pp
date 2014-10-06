@@ -1,5 +1,8 @@
 class grafana::config {
 
+   $graphite_url      = $grafana::graphite_url
+   $elasticsearch_url = $grafana::elasticsearch_url
+
    case $::osfamily {
 	'RedHat': {
 		$fileloc = "/etc/httpd/conf.d/grafana.conf" 
