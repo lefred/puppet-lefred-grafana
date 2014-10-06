@@ -1,4 +1,4 @@
-class graphana::config {
+class grafana::config {
 
    case $::osfamily {
 	'RedHat': {
