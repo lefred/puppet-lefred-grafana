@@ -14,7 +14,7 @@ class grafana::packages {
       '/usr/share/grafana':
         ensure    => link,
         target    => "/usr/share/grafana-${version}",
-        require   => Exec['install_grafana'],
+        require   => [ Exec['install_grafana'], Class['elasticsearch'] ] ,
    }
 
 }
